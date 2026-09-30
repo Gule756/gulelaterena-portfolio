@@ -135,6 +135,8 @@
 @layer utilities {
   .font-display { font-family: var(--app-font-serif); }
   .font-mono-custom { font-family: var(--app-font-mono); }
+  .portrait-frame { border: 1px solid hsl(var(--border)); background: hsl(var(--secondary)); padding: 0.5rem; }
+  .portrait-frame img { aspect-ratio: 4 / 5; display: block; filter: saturate(0.84) contrast(1.04); }
   .outline-focus:focus-visible { outline: 1px solid hsl(var(--primary)); outline-offset: 5px; }
   .editorial-rule { border-color: hsl(var(--border)); }
   .quiet-link { transition: color 250ms ease; }
