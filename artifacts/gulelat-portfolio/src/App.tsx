@@ -35,8 +35,8 @@ const projects = [
     kind: 'Product',
     title: 'Gamified Tradition & Learning App for Gamo Culture',
     shortTitle: 'Gamo culture learning app',
-    description: 'A learning experience that gives Gamo culture a place to be explored, remembered, and shared.',
-    detail: 'The project asks how a culturally grounded subject can become a useful learning loop: discover a story, take part in an activity, and leave with more context than you started with.',
+    description: 'A playful learning experience that gives Gamo culture a clear, curious, and memorable digital shape.',
+    detail: 'The project explores how a culturally grounded subject can become a welcoming learning loop: discover a story, take part in an activity, and return with a little more context.',
     stack: ['React', 'Node.js', 'MongoDB'],
   },
   {
@@ -46,7 +46,7 @@ const projects = [
     title: 'Arba Minch University Campus Navigation',
     shortTitle: 'Campus navigation',
     description: 'A map-led way to find buildings, landmarks, and routes across Arba Minch University.',
-    detail: 'I focused on readable spatial context rather than map decoration: recognizable places, useful markers, and a web interface that stays understandable while working with map data.',
+    detail: 'The focus is useful spatial context rather than map decoration: a readable experience, recognizable places, and a web interface that stays understandable while working with map data.',
     stack: ['Next.js', 'TypeScript', 'MapLibre GL JS'],
   },
   {
@@ -55,8 +55,8 @@ const projects = [
     kind: 'Product',
     title: 'Abrho Study Buddy',
     shortTitle: 'AI study companion',
-    description: 'A study workspace that brings planning, revision, and AI-assisted support into one focused flow.',
-    detail: 'Abrho looks at where AI API integrations can remove friction from studying while keeping the student in control of the learning loop.',
+    description: 'A study workspace that brings planning, revision, and AI-assisted support into one approachable flow.',
+    detail: 'Abrho investigates where AI API integrations can remove friction from studying while keeping the student in control of the learning loop.',
     stack: ['React', 'Tailwind CSS', 'Vite', 'AI APIs'],
   },
   {
@@ -65,8 +65,8 @@ const projects = [
     kind: 'Product',
     title: 'Online Bingo Game',
     shortTitle: 'Full-stack bingo game',
-    description: 'A multiplayer bingo concept balancing quick interaction with the logic of a real game.',
-    detail: 'This connects directly to my internship experience: state, interaction, and the handoff between a lively interface and reliable server logic.',
+    description: 'A multiplayer bingo concept balancing quick interaction with the underlying logic of a real game.',
+    detail: 'This project connects directly to Gulelat’s internship experience: state, interaction, and the handoff between a playful interface and reliable server logic.',
     stack: ['React', 'Next.js', 'Tailwind CSS', 'Python'],
   },
   {
@@ -75,7 +75,7 @@ const projects = [
     kind: 'Experiments',
     title: 'AI-Based Feedback Filter',
     shortTitle: 'Feedback filter',
-    description: 'An exploration of turning feedback into context and a useful next action.',
+    description: 'An exploration of turning feedback into signal, context, and a useful next action.',
     detail: 'The interesting part is not only the model call. It is the interface around the result: helping someone decide what the feedback means and what to do next.',
     stack: ['Python', 'REST APIs', 'React'],
   },
@@ -85,8 +85,8 @@ const projects = [
     kind: 'Experiments',
     title: 'Assignment Checker',
     shortTitle: 'Assignment checker',
-    description: 'A tool concept for making assignment review more consistent and less repetitive.',
-    detail: 'This sits between software quality and education: visible criteria, direct feedback, and a workflow that supports improvement instead of only marking errors.',
+    description: 'A tool concept for making assignment review more consistent, transparent, and less repetitive.',
+    detail: 'This sits at the intersection of software quality and education: clear criteria, visible feedback, and a workflow that supports improvement instead of only marking errors.',
     stack: ['Python', 'TypeScript', 'Vite'],
   },
 ];
@@ -238,13 +238,13 @@ function Home() {
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
             Based in Addis Ababa, Ethiopia
           </p>
-            <h1 className="text-balance text-[clamp(4rem,12.8vw,12.5rem)] font-medium leading-[0.78] tracking-[-0.085em]">
-            I build
+          <h1 className="text-balance text-[clamp(4rem,12.8vw,12.5rem)] font-medium leading-[0.78] tracking-[-0.085em]">
+            Software
             <br />
-            <span className="font-display italic text-primary">useful software.</span>
+            <span className="font-display italic text-primary">with intent.</span>
           </h1>
           <p className="mt-10 max-w-[470px] text-lg leading-relaxed text-muted-foreground sm:ml-[18%] sm:text-xl">
-            I&apos;m Gulelat Erena. I build across the stack, ask a lot of questions, and care about what happens after the code ships.
+            Gulelat Erena is a software engineering graduate building clear, useful products across the stack.
           </p>
         </div>
         <div className="mt-24 flex items-end justify-between border-t border-border pt-5 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
@@ -331,21 +331,16 @@ function Home() {
           <div className="grid gap-16 lg:grid-cols-[1fr_1fr] lg:gap-28">
             <div>
               <h2 id="about-title" className="max-w-2xl text-5xl font-medium leading-[0.9] tracking-[-0.065em] sm:text-7xl">
-                Software for
+                Thoughtful systems,
                 <br />
-                <span className="font-display italic text-primary">real people.</span>
+                <span className="font-display italic text-primary">human scale.</span>
               </h2>
               <p className="mt-9 max-w-md text-lg leading-relaxed text-muted-foreground">
-                I graduated from Arba Minch University in June 2026 with a BSc in Software Engineering. I like the moment a hard technical choice gives someone a simpler path through a product.
+                I am completing a BSc in Software Engineering at Arba Minch University. I enjoy the point where a rigorous technical decision becomes a calmer experience for a real person.
               </p>
               <div className="mt-8 flex items-center gap-3 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground"><MapPin size={14} className="text-primary" /> Addis Ababa, Ethiopia</div>
             </div>
-            <div className="grid gap-10 sm:grid-cols-[minmax(150px,0.48fr)_1fr]">
-              <figure className="portrait-frame self-start">
-                <img src="/gulelat-portrait.jpg" alt="Gulelat Erena in a navy suit" className="h-full w-full object-cover object-top grayscale-[18%]" />
-                <figcaption className="mt-3 font-mono-custom text-[9px] uppercase tracking-[0.14em] text-muted-foreground">Gulelat Erena / Addis Ababa</figcaption>
-              </figure>
-              <div className="border-t border-border">
+            <div className="border-t border-border">
               <div className="grid grid-cols-[1fr_auto] gap-5 border-b border-border py-6">
                 <div>
                   <p className="font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Education</p>
@@ -369,7 +364,6 @@ function Home() {
                   <p className="mt-1 max-w-md text-sm leading-relaxed text-muted-foreground">Built a full-stack bingo gaming application with JavaScript, Node.js, React.js, and MongoDB. Secretary of the Human Rights Club at AMUSU, recognized for service and discipline.</p>
                 </div>
                 <GitBranch size={19} className="mt-1 text-primary" />
-              </div>
               </div>
             </div>
           </div>
@@ -401,9 +395,9 @@ function Home() {
             <div>
               <p className="mb-7 flex items-center gap-3 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground"><Terminal size={14} className="text-primary" /> Open to a good problem</p>
               <h2 id="contact-title" className="max-w-4xl text-6xl font-medium leading-[0.82] tracking-[-0.08em] sm:text-8xl">
-                Have a
+                Let&apos;s make
                 <br />
-                <span className="font-display italic text-primary">problem?</span>
+                <span className="font-display italic text-primary">something useful.</span>
               </h2>
             </div>
             <div>
