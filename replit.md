@@ -1,6 +1,6 @@
-# [Project name]
+# Gulelat Erena — Developer Portfolio
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A responsive personal portfolio for Gulelat Erena, showcasing software engineering projects, full-stack development work, technical range, and ways to connect.
 
 ## Run & Operate
 
@@ -22,23 +22,31 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/gulelat-portfolio/src/App.tsx` — single-page portfolio content, project filtering, mobile navigation, and interactions
+- `artifacts/gulelat-portfolio/src/index.css` — visual system, typography, responsive layout, texture, and motion
+- `artifacts/gulelat-portfolio/vite.config.ts` — Vite app configuration and artifact routing
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- The portfolio is a frontend-only React/Vite artifact; all content is intentionally sourced from the provided resume.
+- The page uses one scroll-based narrative instead of multiple routes so the work, background, skills, and contact path stay connected.
+- Project filtering and expandable notes are client-side interactions because the content is static and does not require persistence.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- Editorial hero introducing Gulelat and his focus
+- Academic metrics for CGPA and National Exit Exam performance
+- Filterable project showcase with expandable project notes
+- Internship, approach, education, leadership, skills, and contact sections
+- Responsive navigation and direct GitHub, email, and phone actions
 
 ## User preferences
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+- Build the portfolio with a modern, attractive, senior-level visual finish based on the resume.
 
 ## Gotchas
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+- The frontend build expects `PORT` and `BASE_PATH` from the managed workflow. For manual checks use `PORT=5000 BASE_PATH=/ pnpm --filter @workspace/gulelat-portfolio run build`.
 
 ## Pointers
 

@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Gulelat Erena — Developer Portfolio"
+description = "A polished personal portfolio for Gulelat Erena, showcasing full-stack development, AI-integrated applications, systems thinking, and software engineering projects."
+version = "1.0.0"
+id = "artifacts/gulelat-portfolio"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20395
+
+[services.development]
+run = "pnpm --filter @workspace/gulelat-portfolio run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/gulelat-portfolio", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/gulelat-portfolio/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20395"
+BASE_PATH = "/"
