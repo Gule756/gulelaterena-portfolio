@@ -25,79 +25,85 @@ import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
 const queryClient = new QueryClient();
 
 const greetings = ['Hello', 'Selam', 'Akkam'];
-const projectFilters = ['All', 'Product', 'Experiments'] as const;
+const projectFilters = ['All', 'Applications', 'Capstone'] as const;
 type ProjectFilter = (typeof projectFilters)[number];
 
 const projects = [
   {
-    id: 'gamo',
+    id: 'feedback',
     index: '01',
-    kind: 'Product',
-    title: 'Gamified Tradition & Learning App for Gamo Culture',
-    shortTitle: 'Gamo culture learning app',
-    description: 'A playful learning experience that gives Gamo culture a clear, curious, and memorable digital shape.',
-    detail: 'The project explores how a culturally grounded subject can become a welcoming learning loop: discover a story, take part in an activity, and return with a little more context.',
-    stack: ['React', 'Node.js', 'MongoDB'],
-  },
-  {
-    id: 'campus',
-    index: '02',
-    kind: 'Product',
-    title: 'Arba Minch University Campus Navigation',
-    shortTitle: 'Campus navigation',
-    description: 'A map-led way to find buildings, landmarks, and routes across Arba Minch University.',
-    detail: 'The focus is useful spatial context rather than map decoration: a readable experience, recognizable places, and a web interface that stays understandable while working with map data.',
-    stack: ['Next.js', 'TypeScript', 'MapLibre GL JS'],
+    kind: 'Applications',
+    title: 'AI-Based Feedback Filter',
+    shortTitle: 'AI-Based Feedback Filter',
+    description: 'An AI-powered platform that analyzes and filters user feedback, presenting AI-generated insights through a clear and usable interface.',
+    detail: 'The project translates AI-generated insights into an interface that helps people understand feedback and decide what to do next.',
+    stack: ['JavaScript', 'TypeScript', 'CSS'],
+    focus: ['AI integration', 'Frontend development', 'User experience'],
   },
   {
     id: 'abrho',
+    index: '02',
+    kind: 'Applications',
+    title: 'Abrho AI — Study Assistant',
+    shortTitle: 'Abrho AI — Study Assistant',
+    description: 'An AI-powered study assistant designed to help students organize and reinforce their learning.',
+    detail: 'Abrho brings study planning and interactive learning support together, exploring practical AI and API integration in a student-focused application.',
+    stack: ['React', 'TypeScript', 'JavaScript', 'Tailwind CSS', 'Vite'],
+    focus: ['AI integration', 'Interactive applications', 'API integration'],
+  },
+  {
+    id: 'campus',
     index: '03',
-    kind: 'Product',
-    title: 'Abrho Study Buddy',
-    shortTitle: 'AI study companion',
-    description: 'A study workspace that brings planning, revision, and AI-assisted support into one approachable flow.',
-    detail: 'Abrho investigates where AI API integrations can remove friction from studying while keeping the student in control of the learning loop.',
-    stack: ['React', 'Tailwind CSS', 'Vite', 'AI APIs'],
-  },
-  {
-    id: 'bingo',
-    index: '04',
-    kind: 'Product',
-    title: 'Online Bingo Game',
-    shortTitle: 'Full-stack bingo game',
-    description: 'A multiplayer bingo concept balancing quick interaction with the underlying logic of a real game.',
-    detail: 'This project connects directly to Gulelat’s internship experience: state, interaction, and the handoff between a playful interface and reliable server logic.',
-    stack: ['React', 'Next.js', 'Tailwind CSS', 'Python'],
-  },
-  {
-    id: 'feedback',
-    index: '05',
-    kind: 'Experiments',
-    title: 'AI-Based Feedback Filter',
-    shortTitle: 'Feedback filter',
-    description: 'An exploration of turning feedback into signal, context, and a useful next action.',
-    detail: 'The interesting part is not only the model call. It is the interface around the result: helping someone decide what the feedback means and what to do next.',
-    stack: ['Python', 'REST APIs', 'React'],
+    kind: 'Applications',
+    title: 'Campus Navigator',
+    shortTitle: 'Campus Navigator',
+    description: "A web-based navigation application designed to help students find their way around Arba Minch University's campus.",
+    detail: 'Interactive map components and location markers make campus places easier to find through a clear, navigation-focused interface.',
+    stack: ['Next.js', 'TypeScript', 'MapLibre GL JS'],
+    focus: ['Interactive maps', 'Navigation', 'Web development'],
   },
   {
     id: 'checker',
-    index: '06',
-    kind: 'Experiments',
+    index: '04',
+    kind: 'Applications',
     title: 'Assignment Checker',
-    shortTitle: 'Assignment checker',
-    description: 'A tool concept for making assignment review more consistent, transparent, and less repetitive.',
-    detail: 'This sits at the intersection of software quality and education: clear criteria, visible feedback, and a workflow that supports improvement instead of only marking errors.',
-    stack: ['Python', 'TypeScript', 'Vite'],
+    shortTitle: 'Assignment Checker',
+    description: 'A web platform that lets students submit assignments online while simplifying the submission process for students and instructors.',
+    detail: 'The project focuses on straightforward submission workflows and a clearer digital process for both sides of an assignment.',
+    stack: ['Python', 'JavaScript', 'HTML', 'CSS'],
+    focus: ['Web application development', 'User workflows'],
+  },
+  {
+    id: 'bingo',
+    index: '05',
+    kind: 'Applications',
+    title: 'Online Bingo',
+    shortTitle: 'Online Bingo',
+    description: 'A real-time web application developed as a full-stack project.',
+    detail: 'The work combines a responsive client interface, real-time game flow, and application logic for an interactive bingo experience.',
+    stack: ['React', 'Next.js', 'Tailwind CSS', 'Python'],
+    focus: ['Real-time functionality', 'Frontend development', 'Application logic'],
+  },
+  {
+    id: 'gamo',
+    index: '06',
+    kind: 'Capstone',
+    title: 'Gamified Gamo Culture Learning App',
+    shortTitle: 'Gamified Gamo Culture Learning App',
+    description: 'A final-year software engineering project focused on creating a gamified learning experience around Gamo culture.',
+    detail: 'Contributed to requirements engineering, UML modeling, system architecture, software quality analysis, and technical documentation.',
+    stack: [],
+    focus: ['Requirements engineering', 'UML modeling', 'System architecture', 'Software quality analysis', 'Technical documentation'],
   },
 ];
 
 const skills = [
-  ['Languages', ['JavaScript', 'TypeScript', 'Python', 'C#', 'Pine Script v5']],
-  ['Interface', ['React', 'Next.js', 'React Native', 'Tailwind CSS', 'Vite']],
-  ['Backend', ['Node.js', 'Express', 'REST APIs', 'Telegram Mini Apps API']],
-  ['Data', ['PostgreSQL', 'MongoDB', 'Supabase', 'Neon']],
-  ['Practice', ['UML', 'Requirements engineering', 'Software quality metrics']],
-  ['Ship', ['Git', 'GitHub', 'Vercel']],
+  ['Languages', ['JavaScript', 'TypeScript', 'Python', 'SQL', 'HTML', 'CSS']],
+  ['Frontend', ['React', 'Next.js', 'Tailwind CSS', 'Vite']],
+  ['Backend', ['Node.js', 'Express', 'REST APIs']],
+  ['Databases', ['PostgreSQL', 'MongoDB', 'Supabase', 'Neon']],
+  ['Engineering', ['Requirements engineering', 'UML', 'Software testing', 'SDLC', 'Software quality', 'Technical documentation']],
+  ['Tools', ['Git', 'GitHub', 'Vercel']],
 ] as const;
 
 function SectionMarker({ number, label }: { number: string; label: string }) {
@@ -241,10 +247,10 @@ function Home() {
           <h1 className="text-balance text-[clamp(4rem,12.8vw,12.5rem)] font-medium leading-[0.78] tracking-[-0.085em]">
             Software
             <br />
-            <span className="font-display italic text-primary">with intent.</span>
+            <span className="font-display italic text-primary">Engineer.</span>
           </h1>
           <p className="mt-10 max-w-[470px] text-lg leading-relaxed text-muted-foreground sm:ml-[18%] sm:text-xl">
-            Gulelat Erena is a software engineering graduate building clear, useful products across the stack.
+            I build modern web applications and AI-powered products, with experience across frontend development, backend development, APIs, databases, and software engineering practices.
           </p>
         </div>
         <div className="mt-24 flex items-end justify-between border-t border-border pt-5 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground">
@@ -264,7 +270,7 @@ function Home() {
               <br />
               <span className="font-display italic text-primary">things made.</span>
             </h2>
-            <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">Products, experiments, and questions made tangible through code.</p>
+            <p className="max-w-xs text-sm leading-relaxed text-muted-foreground">Web applications and software engineering projects, built from requirements through implementation.</p>
           </div>
           <div className="mb-7 flex items-center gap-5 border-b border-border pb-5 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground" role="tablist" aria-label="Filter selected work">
             <span className="text-muted-foreground/60">Index by</span>
@@ -309,9 +315,21 @@ function Home() {
                       <span className="hidden sm:block" />
                       <div>
                         <h3 className="max-w-2xl text-2xl font-medium leading-tight tracking-[-0.04em]">{project.title}</h3>
-                        <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground" data-testid={`text-project-detail-${project.id}`}>{project.detail}</p>
-                        <div className="mt-5 flex flex-wrap gap-x-4 gap-y-2 font-mono-custom text-[10px] uppercase tracking-[0.1em] text-primary">
-                          {project.stack.map((tech) => <span key={tech}>{tech}</span>)}
+                        <p className="mt-4 max-w-2xl leading-relaxed text-muted-foreground" data-testid={`text-project-detail-${project.id}`}>{project.description}</p>
+                        {project.detail && <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground/80">{project.detail}</p>}
+                        {project.stack.length > 0 && (
+                          <div className="mt-5">
+                            <p className="mb-2 font-mono-custom text-[9px] uppercase tracking-[0.14em] text-muted-foreground">Tech</p>
+                            <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono-custom text-[10px] uppercase tracking-[0.1em] text-primary">
+                              {project.stack.map((tech) => <span key={tech}>{tech}</span>)}
+                            </div>
+                          </div>
+                        )}
+                        <div className="mt-5">
+                          <p className="mb-2 font-mono-custom text-[9px] uppercase tracking-[0.14em] text-muted-foreground">{project.id === 'gamo' ? 'My work' : 'Focus'}</p>
+                          <div className="flex flex-wrap gap-x-4 gap-y-2 font-mono-custom text-[10px] uppercase tracking-[0.1em] text-primary">
+                            {project.focus.map((item) => <span key={item}>{item}</span>)}
+                          </div>
                         </div>
                       </div>
                       <span className="font-mono-custom text-[10px] uppercase tracking-[0.13em] text-muted-foreground">{project.kind}</span>
@@ -336,7 +354,10 @@ function Home() {
                 <span className="font-display italic text-primary">human scale.</span>
               </h2>
               <p className="mt-9 max-w-md text-lg leading-relaxed text-muted-foreground">
-                I am completing a BSc in Software Engineering at Arba Minch University. I enjoy the point where a rigorous technical decision becomes a calmer experience for a real person.
+                I&apos;m a Software Engineer focused on building practical, user-centered software. My experience includes full-stack web development with React, Next.js, TypeScript, Node.js, Python, and modern databases, supported by a foundation in requirements engineering, system design, software testing, and software quality.
+              </p>
+              <p className="mt-5 max-w-md leading-relaxed text-muted-foreground">
+                I enjoy taking an idea from requirements and system design through implementation and refinement.
               </p>
               <div className="mt-8 flex items-center gap-3 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground"><MapPin size={14} className="text-primary" /> Addis Ababa, Ethiopia</div>
             </div>
@@ -347,23 +368,24 @@ function Home() {
                   <h3 className="mt-4 text-xl font-medium">BSc Software Engineering</h3>
                   <p className="mt-1 text-sm text-muted-foreground">Arba Minch University / June 2026</p>
                 </div>
-                <span className="font-display text-4xl text-primary">3.81</span>
-              </div>
-              <div className="grid grid-cols-[1fr_auto] gap-5 border-b border-border py-6">
-                <div>
-                  <p className="font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground">National Exit Exam</p>
-                  <h3 className="mt-4 text-xl font-medium">A strong foundation</h3>
-                  <p className="mt-1 text-sm text-muted-foreground">Software engineering / 86.25%</p>
-                </div>
-                <span className="font-display text-4xl text-primary">86.25%</span>
+                <Code2 size={19} className="mt-1 text-primary" />
               </div>
               <div className="grid gap-5 border-b border-border py-6 sm:grid-cols-[1fr_auto]">
                 <div>
-                  <p className="font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Experience + service</p>
-                  <h3 className="mt-4 text-xl font-medium">Ennlite Academy</h3>
-                  <p className="mt-1 max-w-md text-sm leading-relaxed text-muted-foreground">Built a full-stack bingo gaming application with JavaScript, Node.js, React.js, and MongoDB. Secretary of the Human Rights Club at AMUSU, recognized for service and discipline.</p>
+                  <p className="font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Internship / Feb — Jun 2025</p>
+                  <h3 className="mt-4 text-xl font-medium">Software Engineering Intern / Ennlite Academy</h3>
+                  <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">Developed a full-stack Bingo application and worked across frontend, backend, database, and version-control workflows.</p>
+                  <p className="mt-3 font-mono-custom text-[10px] uppercase tracking-[0.1em] text-primary">JavaScript / React / Node.js / MongoDB</p>
                 </div>
                 <GitBranch size={19} className="mt-1 text-primary" />
+              </div>
+              <div className="grid gap-5 border-b border-border py-6 sm:grid-cols-[1fr_auto]">
+                <div>
+                  <p className="font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground">Engineering foundation</p>
+                  <h3 className="mt-4 text-xl font-medium">From requirements to refinement</h3>
+                  <p className="mt-2 max-w-md text-sm leading-relaxed text-muted-foreground">Requirements engineering, UML modeling, system architecture, software testing, quality analysis, and technical documentation.</p>
+                </div>
+                <Terminal size={19} className="mt-1 text-primary" />
               </div>
             </div>
           </div>
@@ -393,11 +415,11 @@ function Home() {
           <SectionMarker number="04" label="Contact" />
           <div className="grid gap-14 lg:grid-cols-[1fr_0.8fr] lg:items-end">
             <div>
-              <p className="mb-7 flex items-center gap-3 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground"><Terminal size={14} className="text-primary" /> Open to a good problem</p>
+              <p className="mb-7 flex items-center gap-3 font-mono-custom text-[10px] uppercase tracking-[0.14em] text-muted-foreground"><Terminal size={14} className="text-primary" /> Interested in working together</p>
               <h2 id="contact-title" className="max-w-4xl text-6xl font-medium leading-[0.82] tracking-[-0.08em] sm:text-8xl">
-                Let&apos;s make
+                Have a software
                 <br />
-                <span className="font-display italic text-primary">something useful.</span>
+                <span className="font-display italic text-primary">project to discuss?</span>
               </h2>
             </div>
             <div>

@@ -1,0 +1,150 @@
+Exactly. For your portfolio, I’d **remove the grades/scores and anything that doesn’t strengthen your software-engineering profile**.
+
+Based strictly on your CV, I’d keep the portfolio focused on:
+
+* **Software Engineer identity**
+* **Full-stack development**
+* **AI-integrated applications**
+* **Web applications**
+* **Software engineering projects**
+* **Technical skills**
+* **Internship experience**
+* **GitHub / live projects**
+* **Relevant engineering knowledge**
+
+I would **not include**:
+
+* CGPA
+* National Exit Exam score
+* Human Rights Club
+* Community service
+* Service/discipline recognition
+* Other non-SE activities
+
+Your strongest relevant material is your internship, AI Feedback Filter, Abrho AI, Campus Navigator, Assignment Checker, Online Bingo, and the Gamo Culture capstone because it demonstrates requirements, architecture, UML, and software quality. 
+
+### So your portfolio should look more like this:
+
+# Gulelat Erena
+
+## Software Engineer
+
+I build modern web applications and AI-powered products, with experience across frontend development, backend development, APIs, databases, and software engineering practices.
+
+**GitHub** · **Projects** · **Contact**
+
+---
+
+## About
+
+I'm a Software Engineer focused on building practical, user-centered software.
+
+My experience includes full-stack web development with React, Next.js, TypeScript, Node.js, Python, and modern databases. I also have a strong foundation in requirements engineering, system design, software testing, and software quality.
+
+I enjoy taking an idea from requirements and system design through implementation and refinement.
+
+---
+
+## Featured Projects
+
+### AI-Based Feedback Filter
+
+An AI-powered platform that analyzes and filters user feedback, presenting AI-generated insights through a clear and usable interface.
+
+**Tech:** JavaScript · TypeScript · CSS
+
+**Focus:** AI integration · Frontend development · User experience
+
+---
+
+### Abrho AI — Study Assistant
+
+An AI-powered study assistant designed to help students organize and reinforce their learning.
+
+**Tech:** React · TypeScript · JavaScript · Tailwind CSS · Vite
+
+**Focus:** AI integration · Interactive applications · API integration
+
+---
+
+### Campus Navigator
+
+A web-based navigation application designed to help students navigate Arba Minch University's campus.
+
+**Tech:** Next.js · TypeScript · MapLibre GL JS
+
+**Focus:** Interactive maps · Navigation · Web development
+
+---
+
+### Assignment Checker
+
+A web platform that allows students to submit assignments online while simplifying the submission process for students and instructors.
+
+**Tech:** Python · JavaScript · HTML · CSS
+
+**Focus:** Web application development · User workflows
+
+---
+
+### Online Bingo
+
+A real-time web application developed as a full-stack project.
+
+**Tech:** React · Next.js · Tailwind CSS · Python
+
+**Focus:** Real-time functionality · Frontend development · Application logic
+
+---
+
+### Gamified Gamo Culture Learning App
+
+A final-year software engineering project focused on creating a gamified learning experience around Gamo culture.
+
+**My work:** Requirements engineering · UML modeling · System architecture · Software quality analysis · Technical documentation
+
+---
+
+## Experience
+
+### Software Engineering Intern
+
+**Ennlite Academy**
+
+Developed a full-stack Bingo application and worked across frontend, backend, database, and version-control workflows.
+
+**Technologies:** JavaScript · React · Node.js · MongoDB
+
+---
+
+## Technical Skills
+
+**Languages**
+JavaScript · TypeScript · Python · SQL · HTML · CSS
+
+**Frontend**
+React · Next.js · Tailwind CSS · Vite
+
+**Backend**
+Node.js · Express · REST APIs
+
+**Databases**
+PostgreSQL · MongoDB · Supabase · Neon
+
+**Software Engineering**
+Requirements Engineering · UML · Software Testing · SDLC · Software Quality · Technical Documentation
+
+**Tools**
+Git · GitHub · Vercel
+
+---
+
+## Contact
+
+Interested in working together or discussing a software project?
+
+**Gulelat Erena**
+
+GitHub · Email
+
+This is much closer to what I would recommend for **your actual portfolio**: no academic scores, no unrelated activities, and no filler. Your portfolio becomes centered on **what you build and your engineering capabilities**.

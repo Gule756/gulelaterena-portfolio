@@ -35,9 +35,9 @@ A responsive personal portfolio for Gulelat Erena, showcasing software engineeri
 ## Product
 
 - Editorial hero introducing Gulelat and his focus
-- Academic metrics for CGPA and National Exit Exam performance
+- Resume-focused software engineering profile with no academic scores or unrelated activities
 - Filterable project showcase with expandable project notes
-- Internship, approach, education, leadership, skills, and contact sections
+- Internship, engineering foundation, education, technical skills, and contact sections
 - Responsive navigation and direct GitHub, email, and phone actions
 
 ## User preferences
