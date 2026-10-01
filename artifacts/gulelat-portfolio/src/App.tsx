@@ -1,5 +1,4 @@
 import { type ReactNode, useEffect, useState } from 'react';
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import {
   ArrowDown,
   ArrowUpRight,
@@ -17,12 +16,9 @@ import {
   X,
 } from 'lucide-react';
 import { ErrorBoundary } from '@/components/error-boundary';
-import { Toaster } from '@/components/ui/toaster';
-import { TooltipProvider } from '@/components/ui/tooltip';
+import { setPageMetadata } from '@/lib/seo';
 import NotFound from '@/pages/not-found';
 import { Route, Switch, useLocation, Router as WouterRouter } from 'wouter';
-
-const queryClient = new QueryClient();
 
 const greetings = ['Hello', 'Selam', 'Akkam'];
 const projectFilters = ['All', 'Applications', 'Capstone'] as const;
@@ -139,6 +135,16 @@ function Home() {
   const [filter, setFilter] = useState<ProjectFilter>('All');
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
   const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    setPageMetadata({
+      title: 'Gulelat Erena | Software Engineer & Web App Developer',
+      description:
+        'Gulelat Erena is a software engineer in Addis Ababa building full-stack web applications and AI-powered products with React, TypeScript, Node.js, and Python.',
+      canonicalPath: '/',
+      index: true,
+    });
+  }, []);
 
   useEffect(() => {
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -454,14 +460,9 @@ function Home() {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
-          <Router />
-        </WouterRouter>
-        <Toaster />
-      </TooltipProvider>
-    </QueryClientProvider>
+    <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
+      <Router />
+    </WouterRouter>
   );
 }
 

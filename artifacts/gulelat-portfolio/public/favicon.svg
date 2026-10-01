@@ -1,3 +1,6 @@
 <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="180" height="180" rx="36" fill="#FF3C00"/>
+  <rect width="180" height="180" rx="36" fill="#0D0F0E"/>
+  <rect x="12" y="12" width="156" height="156" rx="29" stroke="#78815E" stroke-width="2"/>
+  <path d="M49 51H122M49 129H122" stroke="#78815E" stroke-width="2"/>
+  <text x="90" y="111" text-anchor="middle" fill="#E8E9E1" font-family="Georgia, serif" font-size="65" font-style="italic">GE</text>
 </svg>
